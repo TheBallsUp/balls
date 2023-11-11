@@ -2,10 +2,23 @@
 --- It doesn't move you from your current position and doesn't populate Vim marks
 ---
 --- Usage: It accepts both single and multi-char inputs, including spaces.
---- vim.keymap.set("n", "<leader>,", put_at_end(","))
---- vim.keymap.set("n", "<leader>-", put_at_beginning("- "))
---- vim.keymap.set("n", "<leader>{", put_at_beginning("{"))
---- vim.keymap.set("n", "<leader>}", put_at_end("]"))
+---
+---   vim.keymap.set("n", "<leader>,", function()
+---     put_at_beginning(",")
+---   end)
+---
+---   vim.keymap.set("n", "<leader>-", function()
+---     put_at_beginning("- ")
+---   end)
+---
+---   vim.keymap.set("n", "<leader>{", function()
+---     put_at_beginning("{")
+---   end)
+---
+---   vim.keymap.set("n", "<leader>}", function()
+---     put_at_end("}")
+---   end)
+---
 --- BEWARE: If the input is already present, it will remove it (works like a toggle)
 ---
 --- Maintainer: Juan Mañanes <mrsandman.h4sh@gmail.com>
